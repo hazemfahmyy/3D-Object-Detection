@@ -37,8 +37,7 @@ The examples below show how the nearby vehicles are partially detected due to th
 ![img8](results/side_car2.png)
 *Fig. 5*
 
-![img9](results/side_car3.png)
-*Fig. 6*
+![img9](results/side_car3.png) *Fig. 6*
 
 ![img10](results/side_car4.png)
 *Fig. 7*
