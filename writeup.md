@@ -38,24 +38,24 @@ The examples below show how the nearby vehicles are partially detected due to th
 
 ## Create Birds-Eye View from Lidar PCL
 ### Convert sensor coordinates to bev-map coordinates
-!(results/bev_pcl.png)
+![img16](results/bev_pcl.png)
 ### Compute intensity layer of bev-map
-!(results/bev_intensity.png)
+![img17](results/bev_intensity.png)
 ### Compute height layer of bev-map
-!(results/bev_height.png)
+![img18](results/bev_height.png)
 
 ## Model-based Object Detection in BEV Image
 ### Add a second model from a GitHub repo
 ### Extract 3D bounding boxes from model response 
-!(results/labels_detected.png)
+![img19](results/labels_detected.png)
 
 ## Performance Evaluation for Object Detection
 
 The figures below show the performance of darknet (first image) compared to the performance evaluation of fpn_resnet (second image), where it shows that resnet has a higher chance of correctly detecting an object
 
-!(results/darknet.png)
+![img20](results/darknet.png)
 
-!(results/resnet.png)
+![img21](results/resnet.png)
 
 ### Compute intersection-over-union (IOU) between labels and detections 
 ### Compute false-negatives and false-positives 
