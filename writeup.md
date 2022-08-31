@@ -3,7 +3,9 @@
 ## Compute Lidar Point-Cloud from Range Image
 
 ### Visualize range image channels
+Range image - Frame 0:
 ![img1](results/range_image_frame0.png)
+Range image - Frame 0 - Cropped to center:
 ![img2](results/range_image_cropped_frame0.png)
 ![img3](results/range_image_frame1.png)
 ![img4](results/range_image_cropped_frame1.png)
