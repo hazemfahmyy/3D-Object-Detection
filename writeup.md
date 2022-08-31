@@ -29,7 +29,7 @@ The examples below show how the side glasses and windshields of nearby vehicles 
 ![img7](results/glasses2.png)
 *Fig. 3*
 
-The examples below show how the nearby vehicles are partially detected due to the blind spot of the LIDAR detection:
+The examples below show how the nearby vehicles are partially detected due to the blind spot of the LIDAR detection area:
 
 ![img7](results/side_car.png)
 *Fig. 4*
@@ -37,13 +37,22 @@ The examples below show how the nearby vehicles are partially detected due to th
 ![img8](results/side_car2.png)
 *Fig. 5*
 
-![img9](results/side_car3.png) *Fig. 6*
+![img9](results/side_car3.png) 
+*Fig. 6*
 
 ![img10](results/side_car4.png)
 *Fig. 7*
 
 ![img11](results/side_car5.png)
 *Fig. 8*
+
+Finally, the examples below shows how the full body of a vehicle can be detected by the LIDAR images:
+
+![img12](results/full_body.png)
+*Fig. 9*
+
+![img13](results/full_body2.png)
+*Fig. 10*
 
 ## Step 2. Create Birds-Eye View from Lidar PCL
 ### 2-A. Convert sensor coordinates to bev-map coordinates
