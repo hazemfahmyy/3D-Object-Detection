@@ -13,7 +13,7 @@
 # imports
 import numpy as np
 import matplotlib
-matplotlib.use('wxagg') # change backend so that figure maximizing works on Mac as well     
+#matplotlib.use('wxagg') # change backend so that figure maximizing works on Mac as well     
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.path import Path
@@ -143,7 +143,7 @@ def plot_tracks(fig, ax, ax2, track_list, meas_list, lidar_labels, lidar_labels_
     
     # maximize window        
     mng = plt.get_current_fig_manager()
-    mng.frame.Maximize(True)
+    #mng.frame.Maximize(True)
     
     # axis 
     ax.set_xlabel('y [m]')
@@ -169,7 +169,7 @@ def plot_tracks(fig, ax, ax2, track_list, meas_list, lidar_labels, lidar_labels_
     return fig, ax, ax2
 
 
-def plot_rmse(manager, all_labels, configs_det):
+def plot_rmse(manager, all_labels):
     fig, ax = plt.subplots()
     plot_empty = True
     
@@ -194,13 +194,11 @@ def plot_rmse(manager, all_labels, configs_det):
             for label, valid in zip(label_list[0], label_list[1]):
                 error = 0
                 if valid: 
-                    # check if label lies inside specified range
-                    if label.box.center_x > configs_det.lim_x[0] and label.box.center_x < configs_det.lim_x[1] and label.box.center_y > configs_det.lim_y[0] and label.box.center_y < configs_det.lim_y[1]:
-                        error += (label.box.center_x - float(track.x[0]))**2
-                        error += (label.box.center_y - float(track.x[1]))**2
-                        error += (label.box.center_z - float(track.x[2]))**2
-                        if error < min_error:
-                            min_error = error
+                    error += (label.box.center_x - float(track.x[0]))**2
+                    error += (label.box.center_y - float(track.x[1]))**2
+                    error += (label.box.center_z - float(track.x[2]))**2
+                    if error < min_error:
+                        min_error = error
             if min_error < np.inf:
                 error = np.sqrt(min_error)
                 time.append(track.t)
@@ -218,7 +216,7 @@ def plot_rmse(manager, all_labels, configs_det):
     
     # maximize window     
     mng = plt.get_current_fig_manager()
-    mng.frame.Maximize(True)
+    #mng.frame.Maximize(True)
     ax.set_ylim(0,1)
     if plot_empty: 
         print('No confirmed tracks found to plot RMSE!')

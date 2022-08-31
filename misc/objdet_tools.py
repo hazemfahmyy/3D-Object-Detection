@@ -405,6 +405,7 @@ def show_objects_in_bev_labels_in_camera(detections, bev_maps, image, object_lab
 
     # show combined view
     cv2.imshow('labels vs. detected objects', out_img)
+    #cv2.imwrite('./results/labels_detected.png', out_img)
 
 
 # visualize object labels in camera image
