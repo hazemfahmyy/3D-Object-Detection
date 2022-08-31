@@ -77,7 +77,7 @@ The image below shows the height channel of the BEV-map computed above:
 
 In this step we:
 * Add a second model from a GitHub repo
-* 3-B. Extract 3D bounding boxes from model response 
+* Extract 3D bounding boxes from model response 
 
 The image below shows the model response of detecting a 3D object in bird's eye view (BEV):
 
