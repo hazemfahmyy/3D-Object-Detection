@@ -51,7 +51,7 @@ The resultant RMSE plot of multi-object tracking using fusion of multiple sensor
 
 ![img20](results/RMSE_multisensor.png)
 
-The tracking movie is included in the ![movie](result_movie/my_tracking_results.avi)
+The tracking movie is included in result_movie folder --> ![movie](result_movie/my_tracking_results.avi)
 
 
 # Evaluation and Conclusion
