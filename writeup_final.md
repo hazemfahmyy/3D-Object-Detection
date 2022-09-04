@@ -52,15 +52,14 @@ The resultant RMSE plot of multi-object tracking using sensor fusion of lidar an
 ![img20](results/RMSE_multisensor.png)
 
 
-## Evaluation and Conclusion
+# Evaluation and Conclusion
 
-# Implementation Challenges
+## Implementation Challenges
 In general, all the tasks in the the major four steps are fair, given the exercises provided in class. However, integrating all of the them into one system requires hard work, patience and carefulness. One of the time-consuming tasks is camera sensor fusion with LiDAR. I originally used linear measurement to compute measurement-prediction residual, which turned out to result in huge Mahalanobis distances between tracks and camera measurements, and ended up with meaningless association matrices with all the entries being np.nan. I spent a large amount of time on debugging the code, and printing out all the intermediate steps, such as association matrices, generations of measurement data, track states and scores. Printing these intermedite steps really helped me find the fatal error in the very first step of constructing Extended Kalman Filter.
 
-# Sensor Fusion
+## Sensor Fusion and Challenges
 Different sensors for object detection have their pros and cons. For example, on one hand, 3D LiDAR offers more accurate measurement of distance of vehicles, which is lost in camera measurement due to 2D projection of 3D world. On the other hand, camera is the only sensor available to offer rich textured and color-based information such as speed sign, traffic lights, and etc.. LiDAR, however, cannot provide color and texture information. Therefore, to achieve more precise and stable tracking results, an optimal algorithm should require sensor fusion of different sensors like LiDAR and camera, which takes advantages of the edges of all the different sensors and compensates for sensor failures and weaknesses. As demonstrated in the results of Section 3 and Section 4, tracking based on sensor fusion of camera and LiDAR, provides a more precise and stable tracking results than that with LiDAR-only tracking.
 
-# Sensor Fusion Challenges
 A sensor fusion system can face tremendous amount of challenges in real-life scenarios. In this project, the challenges can be categorized into following aspects:
 
 Performance of sensors: performances of both LiDAR and camera can be heavily deteriorated by extreme environmental conditions, like rain, heavy fog, darkness and etc.. We can consider add another different sensor into sensor fusion, like radar measurement to overcome extreme weather conditions.
@@ -68,7 +67,7 @@ Process noise: process noise can be different in different scenarios, such as la
 Complexity of the algorithms: the complexity for data association can increase as more vehicles are detected. In this project, gating method is applied to remove unlikely association pair of detected tracks and measurements to speed up the data association process to make prompt tracking.
 Visibility: each sensor in the sensor fusion systems, has a different field of view (fov), which leads to oscillating track scores. In this project, the front camera sensor has a more narrow fov than LiDAR. A method in_fov is implemented to check whether tracks updated by LiDAR measurement lie outside the fov of the front camera.
 
-# Further Improvements
+## Further Improvements
 
 In the future, there are several directions for improvement over the current sensor fusion and tracking system:
 
